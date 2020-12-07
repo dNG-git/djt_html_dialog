@@ -1,0 +1,35 @@
+/**
+ * direct JavaScript Toolbox
+ * All-in-one toolbox to provide more reusable JavaScript features
+ *
+ * (C) direct Netware Group - All rights reserved
+ * https://www.direct-netware.de/redirect?djt;html;dialog
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public License,
+ * v. 2.0. If a copy of the MPL was not distributed with this file, You can
+ * obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ * https://www.direct-netware.de/redirect?licenses;mpl2
+ *
+ * @license Mozilla Public License, v. 2.0
+ */
+
+dialog.djt-dialog-opened, .djt-dialog-non-native {
+    padding: 0.75em; min-width: 30%; z-index: 212;
+    background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(0, 0, 0, 0.4)
+}
+
+dialog.djt-dialog-opened::backdrop, .djt-dialog-modal-opened .djt-dialog-non-native-overlay { background-color: rgba(0, 0, 0, 0.2) }
+
+djt-dialog { display: block }
+
+.djt-dialog-closed { display: none }
+
+.djt-dialog-modal-opened .djt-dialog-non-native-overlay {
+    max-width: 100vw; max-height: 100vh; display: flex; flex-direction: column; overflow: auto;
+    align-items: center; justify-content: center
+}
+
+.djt-dialog-non-native { margin: 0.25em; overflow: auto }
+.djt-dialog-non-native-overlay { z-index: 212 }
+.djt-dialog-opened { display: inherit }

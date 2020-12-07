@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.default.json",
+
+    "compilerOptions": {
+        "module": "es2015",
+
+        "declaration": false
+    }
+}
